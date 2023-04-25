@@ -15,6 +15,9 @@ function pk_waystones:blocks/waystone/place/blocks_list/store
 # Set controller
 execute positioned ~0.5 ~1.5 ~0.5 summon marker run function pk_waystones:blocks/waystone/place/controller_initialize
 
+# Set name
+execute if score $pk.waystones.settings.name_visibility pk.value matches 1 positioned ~0.5 ~2.3 ~0.5 summon text_display run function pk_waystones:blocks/waystone/place/name_initialize
+
 # Set base block
 setblock ~ ~ ~ barrier
 

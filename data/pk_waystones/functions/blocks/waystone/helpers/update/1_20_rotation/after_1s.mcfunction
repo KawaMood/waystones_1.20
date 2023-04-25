@@ -4,4 +4,4 @@
 execute as @e[type=marker,tag=pk.waystones.update.forceload_chunk] at @s run function pk_waystones:blocks/waystone/helpers/update/1_20_rotation/trigger
 
 # Logs
-execute unless score $logs.load pk.value matches ..0 if score $value pk.temp matches 0 run tellraw @a [{"text": "Updated ","color": "yellow"},{"text": "PK Waystones","color": "aqua","bold": true},{"text": " item displays rotations for 1.20 updated successfully","color": "yellow"}]
+execute unless score $logs.load pk.value matches ..0 run tellraw @a [{"text": "Updated ","color": "yellow"},{"text": "PK Waystones","color": "aqua","bold": true},{"text": " item displays rotations for 1.20 updated successfully","color": "yellow"}]
