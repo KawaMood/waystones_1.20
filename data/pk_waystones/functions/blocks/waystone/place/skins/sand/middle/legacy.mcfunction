@@ -1,0 +1,18 @@
+#> pk_waystones:blocks/waystone/place/skins/sand/middle/legacy
+
+# Set component id score to link entities
+scoreboard players operation @s pk.custom_block.component.id = $next pk.custom_block.component.id
+
+# Add tags
+tag @s add pk.custom_block
+tag @s add pk.custom_block.component
+tag @s add pk.custom_block.decorative
+tag @s add pk.waystones
+tag @s add pk.waystones.waystone
+tag @s add pk.waystones.waystone.component
+tag @s add pk.waystones.waystone.decorative
+tag @s add pk.part.middle
+tag @s add pk.part.middle.legacy
+
+# Set data 
+data merge entity @s {item:{id:"minecraft:chiseled_sandstone",Count:1b},transformation:{translation:[0.4995f,1.4995f,0.4995f],scale:[1.002f,1.002f,1.002f],right_rotation:[0f,1f,0f,0f]}}

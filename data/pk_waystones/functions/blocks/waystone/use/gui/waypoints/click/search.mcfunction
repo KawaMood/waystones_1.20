@@ -1,0 +1,25 @@
+#> pk_waystones:blocks/waystone/use/gui/waypoints/click/search
+# Compare the current content with the previous content and store the missing item
+
+data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set value {}
+
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:0b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:0b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:0b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:1b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:1b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:1b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:2b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:2b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:2b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:3b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:3b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:3b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:4b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:4b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:4b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:5b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:5b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:5b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:6b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:6b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:6b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:7b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:7b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:7b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:8b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:8b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:8b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:9b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:9b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:9b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:10b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:10b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:10b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:11b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:11b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:11b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:12b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:12b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:12b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:13b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:13b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:13b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:14b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:14b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:14b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:15b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:15b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:15b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:16b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:16b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:16b}]
+execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:17b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:17b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:17b}]
+
+data modify storage pk.common:data Backup.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Clicked.Waypoint

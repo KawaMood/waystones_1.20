@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:recipe_unlocked",
+            "conditions": {
+                "recipe": "pk_waystones:nether_waystone"
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:blocks/waystone/actions/craft/trigger/nether"
+    }
+}

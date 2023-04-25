@@ -1,0 +1,17 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:reference",
+            "name": "pk_waystones:location/dimension/-1"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "pk_waystones:location/dimension/0"
+        },
+        {
+            "condition": "minecraft:reference",
+            "name": "pk_waystones:location/dimension/1"
+        }
+    ]
+}

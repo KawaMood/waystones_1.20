@@ -1,0 +1,3 @@
+#> pk_waystones:blocks/waystone/helpers/give/nether
+
+give @s player_head{display:{Name:'{"text":"Waystone","italic": false,"color": "yellow"}',Lore:['{"text":"Waystone","italic": false,"color": "gray"}']},HideFlags:1,pkCustomBlockPlacer:1b,pkWaystone:1b,pkNetherWaystone:1b,SkullOwner:{Name:"%pk.custom_block.waystone",Id:[I;16,11,3,2],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjYzNDdmNmUxNTdmMDMxNjdiNDhiZjc5YzVmMDIwMDRlMTNlODkwNGE2OWFkNjgwZTJkN2ZlOTI3Mjg4ZDg5ZiJ9fX0=",Signature:"nether"}]}},RepairCost:0,CustomModelData:16110034}

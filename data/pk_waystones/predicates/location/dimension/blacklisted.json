@@ -1,0 +1,17 @@
+{
+    "condition": "minecraft:alternative",
+    "terms": [
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "dimension": "pk_crea:creative_superflat"
+            }
+        },
+        {
+            "condition": "minecraft:location_check",
+            "predicate": {
+                "dimension": "pk_creative_dimension:creative_superflat"
+            }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "block": "minecraft:dropper"
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:actions/player_placed_block/player_placed_dropper"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:item_used_on_block",
+            "conditions": {
+                "location": {
+                    "block": {
+                        "nbt": "{Items:[{tag:{pkWaystone:1b}}]}"
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:blocks/waystone/actions/right_click_on_container/trigger"
+    }
+}

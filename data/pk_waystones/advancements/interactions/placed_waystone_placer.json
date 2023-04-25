@@ -1,0 +1,15 @@
+{
+    "criteria": {
+        "requirement": {
+            "trigger": "minecraft:placed_block",
+            "conditions": {
+                "item": {
+                    "nbt": "{pkCustomBlockPlacer:1b,pkWaystone:1b}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "pk_waystones:blocks/waystone/actions/player_placed_waystone_placer/trigger"
+    }
+}
