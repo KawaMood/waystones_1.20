@@ -7,6 +7,9 @@ data remove storage pk.common:data Temp.Waystone
 # Set component score id
 execute store result storage pk.common:data Temp.Waystone.id int 1 run scoreboard players get $next pk.custom_block.component.id
 
+# Set version
+execute store result storage pk.common:data Temp.Waystone.Version int 1 run scoreboard players get $pk.waystones.version pk.value
+
 # Set type and name from item used by player
 data modify storage pk.common:data Temp.Waystone.Type set from storage pk.common:data Temp.Item.tag.SkullOwner.Properties.textures[0].Signature
 data modify storage pk.common:data Temp.Waystone.Name set from storage pk.common:data Temp.Item.tag.display.Name
