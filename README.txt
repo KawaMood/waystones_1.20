@@ -21,7 +21,7 @@ LINKS & CONTACT
 ―――――――――――――――――――――――――――――――――――――――――
 
 Email: contact@pausekawa.net
-Discord: https://discord.gg/usXV6duaeZ
+Discord: https://discord.com/invite/w8s9XWgN6v
 Website: https://www.pausekawa.net
 Planet Minecraft page: https://www.planetminecraft.com/member/pausekawa/
 Youtube channel: https://www.youtube.com/@PauseKawa
