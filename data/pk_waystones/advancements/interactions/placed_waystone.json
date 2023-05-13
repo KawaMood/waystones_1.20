@@ -5,11 +5,9 @@
             "conditions": {
                 "location": [
                     {
-                        "condition": "minecraft:location_check",
+                        "condition": "minecraft:match_tool",
                         "predicate": {
-                            "block": {
-                                "blocks": ["minecraft:dropper"]
-                            }
+                            "nbt": "{pkCustomBlockPlacer:1b,pkWaystone:1b}"
                         }
                     }
                 ]
@@ -17,6 +15,6 @@
         }
     },
     "rewards": {
-        "function": "pk_waystones:actions/player_placed_block/player_placed_dropper"
+        "function": "pk_waystones:blocks/waystone/actions/player_placed/trigger"
     }
 }

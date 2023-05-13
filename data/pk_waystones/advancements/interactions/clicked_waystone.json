@@ -3,11 +3,16 @@
         "requirement": {
             "trigger": "minecraft:item_used_on_block",
             "conditions": {
-                "location": {
-                    "block": {
-                        "nbt": "{Items:[{tag:{pkWaystone:1b}}]}"
+                "location": [
+                    {
+                        "condition": "minecraft:location_check",
+                        "predicate": {
+                            "block": {
+                                "nbt": "{Items:[{tag:{pkWaystone:1b}}]}"
+                            }
+                        }
                     }
-                }
+                ]
             }
         }
     },

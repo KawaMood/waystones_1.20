@@ -21,5 +21,3 @@ execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:14b}] unless 
 execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:15b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:15b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:15b}]
 execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:16b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:16b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:16b}]
 execute if data storage pk.common:data Temp.GUI.Prev.Content[{Slot:17b}] unless data storage pk.common:data Temp.GUI.Content[{Slot:17b}] run data modify storage pk.common:data Temp.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Prev.Content[{Slot:17b}]
-
-data modify storage pk.common:data Backup.GUI.Clicked.Waypoint set from storage pk.common:data Temp.GUI.Clicked.Waypoint

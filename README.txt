@@ -1,8 +1,8 @@
 ―――――――――――――――――――――――――――――――――――――――――
-This data pack has been made by PauseKawa
+This data pack has been made by KawaMood
 ―――――――――――――――――――――――――――――――――――――――――
 
-Only websites I will use to upload my content will always be Planet Minecraft (planetminecraft.com) and my own host (pausekawa.net).
+Only websites I will use to upload my content will always be Planet Minecraft (planetminecraft.com) and my own host (kawamood.com).
 If this data pack has been downloaded from another website, that means my content has been stolen, so be careful with its content: this data pack can then be outdated, or potentially even contains malicious files. Please be sure to download it from one of the websites/plateforms mentioned in the "Links & Contact" section below and nowhere else.
 
 ―――――――――――――――――――――――――――――――――――――――――
@@ -20,8 +20,8 @@ You're free to share and adapt this content under the following terms:
 LINKS & CONTACT
 ―――――――――――――――――――――――――――――――――――――――――
 
-Email: contact@pausekawa.net
+Email: contact@kawamood.com
 Discord: https://discord.com/invite/w8s9XWgN6v
-Website: https://www.pausekawa.net
-Planet Minecraft page: https://www.planetminecraft.com/member/pausekawa/
-Youtube channel: https://www.youtube.com/@PauseKawa
+Website: https://www.kawamood.com
+Planet Minecraft page: https://www.planetminecraft.com/member/kawamood/
+Youtube channel: https://www.youtube.com/@KawaMood

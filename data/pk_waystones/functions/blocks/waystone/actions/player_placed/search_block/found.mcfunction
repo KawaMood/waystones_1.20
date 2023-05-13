@@ -1,4 +1,4 @@
-#> pk_waystones:blocks/waystone/actions/player_placed_waystone_placer/search_block/found
+#> pk_waystones:blocks/waystone/actions/player_placed/search_block/found
 # Block has been found
 
 scoreboard players set $found pk.temp 1

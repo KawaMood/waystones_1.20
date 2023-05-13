@@ -26,16 +26,16 @@ data modify storage pk.common:data Temp.Waystone.Waypoint.tag.pkData.Owner.id se
 data modify storage pk.common:data Temp.Waystone.Waypoint.tag.pkData merge value {Private:0b,Protected:0b}
 
 # Set dimension name and id
-execute if score $temp pk.dimension.id matches -1 run data modify storage pk.common:data Temp.Dimension.Name set value "the Nether"
-execute if score $temp pk.dimension.id matches 0 run data modify storage pk.common:data Temp.Dimension.Name set value "Overworld"
-execute if score $temp pk.dimension.id matches 1 run data modify storage pk.common:data Temp.Dimension.Name set value "the End"
-execute if score $temp pk.dimension.id matches 99.. run data modify storage pk.common:data Temp.Dimension.Name set value "a custom dimension"
-execute store result storage pk.common:data Temp.Waystone.Waypoint.tag.pkData.Dimension.id int 1 run scoreboard players get $temp pk.dimension.id
+data modify storage pk.common:data Temp.Dimension.Name set from storage pk.common:data Temp.Waystone.Dimension
+execute if data storage pk.common:data Temp.Waystone{Dimension:"minecraft:the_nether"} run data modify storage pk.common:data Temp.Dimension.Name set value "the Nether"
+execute if data storage pk.common:data Temp.Waystone{Dimension:"minecraft:overworld"} run data modify storage pk.common:data Temp.Dimension.Name set value "Overworld"
+execute if data storage pk.common:data Temp.Waystone{Dimension:"minecraft:the_end"} run data modify storage pk.common:data Temp.Dimension.Name set value "the End"
+data modify storage pk.common:data Temp.Waystone.Waypoint.tag.pkData.Dimension set from storage pk.common:data Temp.Waystone.Dimension
 
 # Set lore and name
-setblock ~ ~ ~ oak_sign{Text1:'{"nbt":"Temp.Waystone.Name","storage":"pk.common:data","color":"yellow","italic":false,"interpret":true}',Text2:'[{"text": "[","italic":false},{"nbt":"Temp.Waystone.x","storage":"pk.common:data"},{"text": ","},{"nbt":"Temp.Waystone.y","storage":"pk.common:data"},{"text": ","},{"nbt":"Temp.Waystone.z","storage":"pk.common:data"},{"text": "] in "},{"nbt":"Temp.Dimension.Name","storage":"pk.common:data"}]'}
-data modify storage pk.common:data Temp.Waystone.Waypoint.tag.display.Name set from block ~ ~ ~ Text1
-data modify storage pk.common:data Temp.Waystone.Waypoint.tag.display.Lore append from block ~ ~ ~ Text2
+setblock ~ ~ ~ oak_sign{front_text:{messages:['{"nbt":"Temp.Waystone.Name","storage":"pk.common:data","color":"yellow","italic":false,"interpret":true}','[{"text": "[","italic":false},{"nbt":"Temp.Waystone.x","storage":"pk.common:data"},{"text": ","},{"nbt":"Temp.Waystone.y","storage":"pk.common:data"},{"text": ","},{"nbt":"Temp.Waystone.z","storage":"pk.common:data"},{"text": "] in "},{"nbt":"Temp.Dimension.Name","storage":"pk.common:data"}]','{"text":""}','{"text":""}']}}
+data modify storage pk.common:data Temp.Waystone.Waypoint.tag.display.Name set from block ~ ~ ~ front_text.messages[0]
+data modify storage pk.common:data Temp.Waystone.Waypoint.tag.display.Lore append from block ~ ~ ~ front_text.messages[1]
 
 # Remove armor_stand
 kill @s

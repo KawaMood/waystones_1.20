@@ -27,7 +27,8 @@
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Locations:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-# Location -30000000 0 1611 | Used in any custom dimension by the dimension_marker helper (need to stay forceloaded)
+# Location -3000 0 1611 in Overworld | Standardized chunk used by many data packs, used here to run command blocks processes
+execute in minecraft:overworld run forceload add -3000 -1600
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Storage:
@@ -64,6 +65,7 @@ scoreboard objectives add pk.crafted.knowledge_book crafted:knowledge_book
 scoreboard objectives add pk.waystones.mined.barrel mined:barrel
 scoreboard objectives add pk.waystones.owned_waystones_amount dummy
 scoreboard objectives add pk.waystones.player.leave_game custom:leave_game
+scoreboard objectives add pk.waystones.player.setting.hide_coordinates trigger
 scoreboard objectives add pk.waystones.waystone.page dummy
 scoreboard objectives add pk.waystones.waystone.animations.delay dummy
 

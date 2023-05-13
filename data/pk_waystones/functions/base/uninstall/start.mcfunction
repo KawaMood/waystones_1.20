@@ -1,14 +1,22 @@
 #> pk_waystones:base/uninstall/start
-# Uninstall the data pack and remove the common feature if there is no PK data pack installed anymore
+# Uninstall the data pack and remove the common feature if there is no KawaMood data pack installed anymore
 
-# Remove all placed custom blocks
-# Will need to be searched within all dimensions
-data remove storage pk.common:data Temp.Array
-data modify storage pk.common:data Temp.Array.Search set value []
-# - Append Custom Blocks
-data modify storage pk.common:data Temp.Array.Search append from storage pk.waystones:data Blocks.Waystones[]
-# - Forceload chunks where custom blocks are, then wait for the chunk to be fully loaded
-execute if data storage pk.common:data Temp.Array.Search[{}] run function pk_waystones:base/uninstall/marker_summon_recursive
+# Turn off command blocks output in chat during the process
+execute store success score $gm_command_block_output_state pk.value run gamerule commandBlockOutput false
 
-# Delayed process, assuming the chunk is fully loaded after the delay
-schedule function pk_waystones:base/uninstall/after_1s 1s
+# Check if the specific chunk that need to stay loaded is loaded 
+execute store result score $forceload pk.temp run forceload query -3000 1611
+execute if score $forceload pk.temp matches 0 run forceload add -3000 1611
+
+# Remove all placed custom blocks from the data packs
+data remove storage pk.common:data Uninstall.Array
+data modify storage pk.common:data Uninstall.Array.Search set value []
+# - Append Attempt Blocks
+data modify storage pk.common:data Uninstall.Array.Search append from storage pk.waystones:data Blocks.Waystones[]
+
+# Logs
+tellraw @a [{"text": "Started uninstalling process for ","color": "yellow"},{"text": "KawaMood's Waystones","color": "aqua","bold": true},{"text":". It might take some seconds...","color": "yellow"}]
+
+# Recursive function
+execute if data storage pk.common:data Uninstall.Array.Search[{}] run function pk_waystones:base/uninstall/recursive
+execute unless data storage pk.common:data Uninstall.Array.Search[{}] run function pk_waystones:base/uninstall/stop
