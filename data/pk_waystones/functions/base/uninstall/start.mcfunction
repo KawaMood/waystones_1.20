@@ -11,7 +11,7 @@ execute if score $forceload pk.temp matches 0 run forceload add -3000 1611
 # Remove all placed custom blocks from the data packs
 data remove storage pk.common:data Uninstall.Array
 data modify storage pk.common:data Uninstall.Array.Search set value []
-# - Append Attempt Blocks
+# - Append Waystones
 data modify storage pk.common:data Uninstall.Array.Search append from storage pk.waystones:data Blocks.Waystones[]
 
 # Logs
