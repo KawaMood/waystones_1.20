@@ -5,8 +5,8 @@
 execute store success score $gm_command_block_output_state pk.value run gamerule commandBlockOutput false
 
 # Check if the specific chunk that need to stay loaded is loaded 
-execute store result score $forceload pk.temp run forceload query -3000 1611
-execute if score $forceload pk.temp matches 0 run forceload add -3000 1611
+execute store result score $forceload pk.temp run forceload query -30000000 -1611
+execute if score $forceload pk.temp matches 0 run forceload add -30000000 -1611
 
 # Remove all placed custom blocks from the data packs
 data remove storage pk.common:data Uninstall.Array
