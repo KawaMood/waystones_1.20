@@ -1,6 +1,6 @@
 # Check if the specific chunk that need to stay loaded is loaded 
-execute store result score $forceload pk.temp run forceload query -30000000 -1611
-execute if score $forceload pk.temp matches 0 run forceload add -30000000 -1611
+execute store result score $forceload pk.temp run forceload query -30000000 1611
+execute if score $forceload pk.temp matches 0 run forceload add -30000000 1611
 
 # Place sign
 setblock -30000000 61 1611 stone

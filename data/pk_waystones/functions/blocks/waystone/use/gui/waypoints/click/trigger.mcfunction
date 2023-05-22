@@ -19,5 +19,5 @@ execute in minecraft:overworld run function pk_waystones:blocks/waystone/use/gui
 # Logs
 execute if score $logs.datapack.waystones pk.value matches 1 run tellraw @a[tag=pk.dev] [{"selector":"@a[tag=pk.temp.current,limit=1]","color": "gray"},{"text": " clicked \"waypoint\" button"}]
 
-# After 1 tick
+# After 2 tick
 schedule function pk_waystones:blocks/waystone/use/gui/waypoints/click/after_2t 2t

@@ -19,6 +19,7 @@ tag @s add pk.waystones.waystone.controller
 tag @s add pk.waystones.state.public
 tag @s add pk.waystones.state.unprotected
 
+execute if score $pk.waystones.settings.name_visibility pk.value matches 1 run tag @s add pk.waystones.show_name
 execute if score $pk.waystones.settings.legacy_textures pk.value matches 1.. run tag @s add pk.legacy_textures
 
 # Store information to the controller
