@@ -13,14 +13,14 @@ data modify storage pk.common:data Temp.Waypoint set from entity @s data.Wayston
 setblock ~ ~-1 ~ oak_sign
 
 # Add the "Prev Page" button
-data modify block ~ ~-1 ~ Text1 set value '[{"text":"Previous page [","italic":false},{"score":{"name":"$gui.current_page","objective":"pk.temp"}},{"text":"/"},{"score":{"name":"$gui.total_pages","objective":"pk.temp"}},{"text":"]"}]'
+data modify block ~ ~-1 ~ front_text.messages[0] set value '[{"text":"Previous page [","italic":false},{"score":{"name":"$gui.current_page","objective":"pk.temp"}},{"text":"/"},{"score":{"name":"$gui.total_pages","objective":"pk.temp"}},{"text":"]"}]'
 execute if score @s pk.waystones.waystone.page matches 2.. run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:18b,id:"minecraft:gunpowder",Count:1b,tag:{pkGUI:1b,pkWaystoneGUI:1b,pkMenu:1b,pkData:{action:"page.prev"}}}
-execute if score @s pk.waystones.waystone.page matches 2.. run data modify storage pk.common:data Temp.GUI.Menu[-1].tag.display.Name set from block ~ ~-1 ~ Text1
+execute if score @s pk.waystones.waystone.page matches 2.. run data modify storage pk.common:data Temp.GUI.Menu[-1].tag.display.Name set from block ~ ~-1 ~ front_text.messages[0]
 
 # Add the "Next Page" button
-data modify block ~ ~-1 ~ Text1 set value '[{"text":"Next page [","italic":false},{"score":{"name":"$gui.current_page","objective":"pk.temp"}},{"text":"/"},{"score":{"name":"$gui.total_pages","objective":"pk.temp"}},{"text":"]"}]'
+data modify block ~ ~-1 ~ front_text.messages[0] set value '[{"text":"Next page [","italic":false},{"score":{"name":"$gui.current_page","objective":"pk.temp"}},{"text":"/"},{"score":{"name":"$gui.total_pages","objective":"pk.temp"}},{"text":"]"}]'
 execute if score @s pk.waystones.waystone.page < $gui.total_pages pk.temp run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:26b,id:"minecraft:gunpowder",Count:1b,tag:{pkGUI:1b,pkWaystoneGUI:1b,pkMenu:1b,pkData:{action:"page.next"}}}
-execute if score @s pk.waystones.waystone.page < $gui.total_pages pk.temp run data modify storage pk.common:data Temp.GUI.Menu[-1].tag.display.Name set from block ~ ~-1 ~ Text1
+execute if score @s pk.waystones.waystone.page < $gui.total_pages pk.temp run data modify storage pk.common:data Temp.GUI.Menu[-1].tag.display.Name set from block ~ ~-1 ~ front_text.messages[0]
 
 # Add the "Hide" button
 execute if entity @s[tag=pk.waystones.state.public] run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:19b,id:"minecraft:lime_dye",Count:1b,tag:{pkGUI:1b,pkWaystone:1b,pkMenu:1b,pkData:{action:"waypoint.visibility.private"},display:{Name:'{"text":"Visibility [Public]","italic":false}',Lore:['{"text":"Click to hide this waypoint"}','{"text":"in the public list"}']}}}

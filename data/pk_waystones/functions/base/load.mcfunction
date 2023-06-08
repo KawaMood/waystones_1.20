@@ -82,7 +82,7 @@ function pk_waystones:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 6 run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 7 run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:
