@@ -1,7 +1,7 @@
 #> pk_waystones:base/uninstall/stop
 
 # Restore commandBlockOutput gamerule state
-execute if score $gm_command_block_output_state pk.value matches 1 run gamerule commandBlockOutput true
+execute if score $gamerule.command_block_output.previous_value pk.value matches 1 run gamerule commandBlockOutput true
 
 # Remove features specific to the data pack
 function pk_waystones:base/uninstall/remove_specific_features

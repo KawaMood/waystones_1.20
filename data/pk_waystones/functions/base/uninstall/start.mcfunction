@@ -5,7 +5,7 @@
 tag @s add pk.uninstaller
 
 # Turn off command blocks output in chat during the process
-execute store success score $gm_command_block_output_state pk.value run gamerule commandBlockOutput false
+execute store success score $gamerule.command_block_output.previous_value pk.value run gamerule commandBlockOutput false
 
 # Check if the specific chunk that need to stay loaded is loaded 
 execute store result score $forceload pk.temp run forceload query -30000000 1611

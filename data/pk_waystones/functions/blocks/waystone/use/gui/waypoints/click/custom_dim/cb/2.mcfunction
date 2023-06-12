@@ -1,4 +1,4 @@
-#> pk_waystones:blocks/waystone/use/gui/waypoints/click/cb/2
+#> pk_waystones:blocks/waystone/use/gui/waypoints/click/custom_dim/cb/2
 # Prepare command for the CB 3 and schedule the function that remove block
 
 # Parse the desired command and put it
