@@ -25,10 +25,14 @@ execute if score @s pk.waystones.waystone.page < $gui.total_pages pk.temp run da
 # Add the "Hide" button
 execute if entity @s[tag=pk.waystones.state.public] run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:19b,id:"minecraft:lime_dye",Count:1b,tag:{pkGUI:1b,pkWaystone:1b,pkMenu:1b,pkData:{action:"waypoint.visibility.private"},display:{Name:'{"text":"Visibility [Public]","italic":false}',Lore:['{"text":"Click to hide this waypoint"}','{"text":"in the public list"}']}}}
 execute if entity @s[tag=pk.waystones.state.private] run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:19b,id:"minecraft:magenta_dye",Count:1b,tag:{pkGUI:1b,pkWaystone:1b,pkMenu:1b,pkData:{action:"waypoint.visibility.public"},display:{Name:'{"text":"Visibility [Private]","italic":false}',Lore:['{"text":"Click to show this waypoint"}','{"text":"in the public list"}']}}}
+# - Hide the button for regular player if setting doesn't allow it
+execute if score $pk.waystones.settings.allow_visibility_change pk.value matches ..0 unless entity @a[tag=pk.temp.current,tag=pk.waystones.manager,limit=1,distance=..10] run data remove storage pk.common:data Temp.GUI.Menu[{Slot:19b}]
 
 # Add the "Protect" button
 execute if entity @s[tag=pk.waystones.state.unprotected] run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:20b,id:"minecraft:lime_dye",Count:1b,tag:{pkGUI:1b,pkWaystone:1b,pkMenu:1b,pkData:{action:"waypoint.protection.enable"},display:{Name:'{"text":"Protection [Disabled]","italic":false}',Lore:['{"text":"Click to prevent this waypoint"}','{"text":"to be broken by any source"}']}}}
 execute if entity @s[tag=pk.waystones.state.protected] run data modify storage pk.common:data Temp.GUI.Menu append value {Slot:20b,id:"minecraft:magenta_dye",Count:1b,tag:{pkGUI:1b,pkWaystone:1b,pkMenu:1b,pkData:{action:"waypoint.protection.disable"},display:{Name:'{"text":"Protection [Enabled]","italic":false}',Lore:['{"text":"Click to allow this Waystone"}','{"text":"to be broken by any source"}']}}}
+# - Hide the button for regular player if setting doesn't allow it
+execute if score $pk.waystones.settings.allow_protection_change pk.value matches ..0 unless entity @a[tag=pk.temp.current,tag=pk.waystones.manager,limit=1,distance=..10] run data remove storage pk.common:data Temp.GUI.Menu[{Slot:20b}]
 
 # Remove the temporary sign
 setblock ~ ~-1 ~ barrier

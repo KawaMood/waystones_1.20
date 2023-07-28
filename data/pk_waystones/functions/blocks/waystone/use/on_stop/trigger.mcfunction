@@ -1,6 +1,9 @@
 #> pk_waystones:blocks/waystone/use/on_stop/trigger
 # Player stops to use a Waystone
 
+# Set scores
+scoreboard players operation $temp pk.custom_block.component.id = @s pk.custom_block.component.id
+
 # Remove tag
 tag @s remove pk.custom_block.in_use
 

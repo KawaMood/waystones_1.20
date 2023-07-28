@@ -18,7 +18,10 @@
 # - $pk.waystones.settings.legacy_textures pk.value | default: (undefined) | (undefined) or <=0 = disable | >=1 = use legacy Waystone textures
 #
 # /!\ Specific settings that need to be toggle using commands (function pk_waystones:cmd/settings/<path>)
-# - $pk.waystones.settings.name_visibility pk.value | default: (undefined) | (undefined) or <=0 = hide | >=1 = use show Waystones names above themselves
+# - $pk.waystones.settings.name_visibility pk.value | default: (undefined) | (undefined) or <=0 = hide | >=1 = show Waystones names above themselves
+# - $pk.waystones.settings.show_same_dimension_only pk.value | default: (undefined) | >=1 show only Waystones of same the dimension in a Waystone's menu
+# - $pk.waystones.settings.allow_visibility_change pk.value | default: (undefined) | (undefined) or >=1 = allow | <=0 = disallow Visibility changes for regular players
+# - $pk.waystones.settings.allow_protection_change pk.value | default: (undefined) | (undefined) or >=1 = allow | <=0 = disallow Protection changes for regular players
 
 # Special tags:
 # - pk.dev : Allow player to see data packs specific logs
@@ -82,7 +85,7 @@ function pk_waystones:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 8 run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 9 run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:

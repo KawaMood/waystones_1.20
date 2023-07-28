@@ -7,6 +7,7 @@ scoreboard players operation $gui.current_page pk.temp = @s pk.waystones.wayston
 scoreboard players set $gui.total_pages pk.temp 0
 
 # Prepare data
+execute if score $pk.waystones.settings.show_same_dimension_only pk.value matches 1.. run data modify storage pk.common:data Temp.CurrentDimension set from entity @s data.Waystone.Dimension
 data remove storage pk.common:data Temp.GUI
 
 # Create pages

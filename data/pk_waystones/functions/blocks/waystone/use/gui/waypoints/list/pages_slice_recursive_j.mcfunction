@@ -9,6 +9,8 @@ execute store result score $owner.id pk.temp run data get storage pk.common:data
 execute if score $waystone_id pk.temp = $temp pk.custom_block.component.id run scoreboard players set $should_skip_waypoint pk.temp 1
 # - The Waypoint is private and the current user isn't the owner or a manager: skip it
 execute if data storage pk.common:data Temp.Waystones[0].Waypoint.tag.pkData{Private:1b} unless entity @a[tag=pk.temp.current,distance=..10,predicate=pk_waystones:gameplay/waystone/owner_or_manager,limit=1] run scoreboard players set $should_skip_waypoint pk.temp 1
+# - "Only show the Waystones of the same dimension" setting is enabled and the dimension of the Waypoint is different from the current Waystone's dimension
+execute if score $pk.waystones.settings.show_same_dimension_only pk.value matches 1.. run function pk_waystones:blocks/waystone/use/gui/waypoints/list/settings/show_only_same_dimension
 # - Otherwise, add the waypoint in the list
 execute if score $should_skip_waypoint pk.temp matches 0 run function pk_waystones:blocks/waystone/use/gui/waypoints/list/pages_add_waypoint
 
