@@ -3,6 +3,10 @@
 # Logs
 execute if score $logs.datapack.waystones pk.value matches 1 run tellraw @a[tag=pk.dev] [{"selector":"@a[tag=pk.temp.current,limit=1]","color": "gray"},{"text": " clicked \"waypoint\" button"}]
 
+# Search for player's vehicle
+scoreboard players set $has_vehicle pk.temp 0
+execute if score $pk.waystones.settings.keep_vehicle_on_tp pk.value matches 1 as @a[tag=pk.temp.current,limit=1] on vehicle if entity @s run function pk_waystones:blocks/waystone/use/gui/waypoints/click/player_has_vehicle
+
 # Search the clicked waypoint
 function pk_waystones:blocks/waystone/use/gui/waypoints/click/search
 
