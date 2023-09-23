@@ -1,4 +1,4 @@
-#> pk_waystones:blocks/waystone/helpers/settings/name_visibility/update/chunk_update_single_element
+#> pk_waystones:blocks/waystone/helpers/settings/name_visibility/update/marker_update_single_element
 
 scoreboard players operation $temp pk.custom_block.component.id = @s pk.custom_block.component.id
 data modify storage pk.common:data Temp.Waystone set from entity @s data.Waystone

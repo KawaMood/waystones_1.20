@@ -29,12 +29,6 @@
 # - pk.waystones.manager : Allow player to bypass restrictions and manage other players Waystones
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
-# Locations:
-# ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-# Location -30000000 0 1611 in Overworld | Standardized chunk used by many data packs, used here to run command blocks processes
-execute in minecraft:overworld run forceload add -30000000 1600
-
-# ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Storage:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 # Define storage
@@ -86,7 +80,7 @@ function pk_waystones:packages/air_toggling/load
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 10 run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 11 run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:
