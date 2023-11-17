@@ -22,7 +22,7 @@
 # - $pk.waystones.settings.show_same_dimension_only pk.value | default: (undefined) | >=1 show only Waystones of same the dimension in a Waystone's menu
 # - $pk.waystones.settings.allow_visibility_change pk.value | default: (undefined) | (undefined) or >=1 = allow | <=0 = disallow Visibility changes for regular players
 # - $pk.waystones.settings.allow_protection_change pk.value | default: (undefined) | (undefined) or >=1 = allow | <=0 = disallow Protection changes for regular players
-# - $pk.waystones.settings.keep_vehicle_on_tp pk.value | default: (undefined) | (undefined) or <=0 = don't | >=1 = teleport the player's vehicle when using a Waypoint
+# - $pk.waystones.settings.grouped_tp pk.value | default: 1 | (undefined) or <=0 = don't | >=1 = teleport the player's vehicle when using a Waypoint
 
 # Special tags:
 # - pk.dev : Allow player to see data packs specific logs
@@ -60,6 +60,7 @@ scoreboard objectives add pk.custom_block.interaction.id dummy
 scoreboard objectives add pk.crafted.knowledge_book crafted:knowledge_book
 
 # Define objective that are specific to the current data pack
+scoreboard objectives add pk.waystones.link dummy
 scoreboard objectives add pk.waystones.mined.barrel mined:barrel
 scoreboard objectives add pk.waystones.owned_waystones_amount dummy
 scoreboard objectives add pk.waystones.player.leave_game custom:leave_game
@@ -72,15 +73,13 @@ scoreboard objectives add pk.waystones.waystone.animations.delay dummy
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 # Player id
 function pk_waystones:packages/player_id/load
-# RNG
-function pk_waystones:packages/random/load
 # Air toggling
 function pk_waystones:packages/air_toggling/load
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Updates:
 # ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-execute unless score $pk.waystones.version pk.value matches 11 run function pk_waystones:base/update/start
+execute unless score $pk.waystones.version pk.value matches 12 run function pk_waystones:base/update/start
 
 # ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― 
 # Logs:

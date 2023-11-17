@@ -6,7 +6,9 @@
 execute if score $pk.waystones.version pk.value matches ..3 run function pk_waystones:base/update/revisions/4
 # - Changes from V.2.1.0
 execute if score $pk.waystones.version pk.value matches ..5 run function pk_waystones:base/update/revisions/6/start
+# - Changes from V.2.1.6
+execute if score $pk.waystones.version pk.value matches ..11 run function pk_waystones:base/update/revisions/12
 
 # Set the data pack current version score
-scoreboard players set $pk.waystones.version pk.value 11
-data modify storage pk.common:data Datapacks[{Name:"Waystones"}].Version set value "2.1.5"
+scoreboard players set $pk.waystones.version pk.value 12
+data modify storage pk.common:data Datapacks[{Name:"Waystones"}].Version set value "2.1.6"

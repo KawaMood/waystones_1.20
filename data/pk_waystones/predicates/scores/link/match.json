@@ -1,0 +1,26 @@
+{
+    "condition": "minecraft:value_check",
+    "value": {
+        "type": "minecraft:score",
+        "target": "this",
+        "score": "pk.waystones.link"
+    },
+    "range": {
+        "min": {
+            "type": "minecraft:score",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "$temp"
+            },
+            "score": "pk.waystones.link"
+        },
+        "max": {
+            "type": "minecraft:score",
+            "target": {
+                "type": "minecraft:fixed",
+                "name": "$temp"
+            },
+            "score": "pk.waystones.link"
+        }
+    }
+}
