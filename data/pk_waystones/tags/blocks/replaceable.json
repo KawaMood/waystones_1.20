@@ -1,9 +1,10 @@
 {
+    "_version": "1.20.3",
     "values": [
         "minecraft:air",
         "minecraft:water",
         "minecraft:lava",
-        "minecraft:grass",
+        "minecraft:short_grass",
         "minecraft:fern",
         "minecraft:dead_bush",
         "minecraft:seagrass",

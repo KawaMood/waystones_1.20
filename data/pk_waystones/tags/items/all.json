@@ -1,5 +1,5 @@
 {
-    "_version": "23w14a",
+    "_version": "1.20.3",
     "replace": false,
     "values": [
         "minecraft:acacia_boat",
@@ -498,7 +498,7 @@
         "minecraft:granite_slab",
         "minecraft:granite_stairs",
         "minecraft:granite_wall",
-        "minecraft:grass",
+        "minecraft:short_grass",
         "minecraft:grass_block",
         "minecraft:gravel",
         "minecraft:gray_banner",
