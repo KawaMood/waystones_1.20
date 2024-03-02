@@ -38,7 +38,7 @@ I recommend you to [watch the featured video](https://youtu.be/QDvdj5lfnIY) for 
 
 # 🔖Attributes
 
-In the toolbar of the waystones GUI, you can see three buttons in the middle. If you're a waystone manager or the owner of the current waystone, these buttons will allow you to edit their attributes. Other players won't of course be able to edit its attributes.
+In the toolbar of the waystones GUI, you can see two buttons in the middle. If you're a waystone manager or the owner of the current waystone, these buttons will allow you to edit their attributes. Other players won't of course be able to edit its attributes.
 
 Other buttons may appear on the bottom-left and bottom-right corners if you have placed many waystones in your world. They are the pagination buttons.
 
