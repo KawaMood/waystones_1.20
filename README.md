@@ -191,10 +191,10 @@ The data pack also provides some handy commands. Some of them are usable by both
 
 If you are an operator of your server or if cheats are enabled in your single-player world, you can give yourself a waystone of any variant using these following commands:
 ```
-/function pk_waystones:items/waystone/give/regular
-/function pk_waystones:items/waystone/give/sand
-/function pk_waystones:items/waystone/give/deepslate
-/function pk_waystones:items/waystone/give/nether
+/function pk_waystones:cmd/give/regular
+/function pk_waystones:cmd/give/sand
+/function pk_waystones:cmd/give/deepslate
+/function pk_waystones:cmd/give/nether
 ```
 
 ## (For non-op players) Hide locations from the waystones list
