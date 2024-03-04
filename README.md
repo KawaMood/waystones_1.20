@@ -73,7 +73,7 @@ Example - Granting the manager role to the player named "Bob"
 /tag Bob add pk.waystones.manager
 ```
 
-# ⚙️Settings & Permissions
+# ⚙️Settings
 
 <details>
 <summary>Blacklisted Dimensions</summary>
