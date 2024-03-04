@@ -162,7 +162,7 @@ In order to **allow** or **disallow** players to change the waystones **protecti
 ```
 </details>
 <details>
-<summary>Permission: Tp In Other Dimensions</summary>
+<summary>Tp with your vehicle and leashed companions</summary>
 
 These commands respectively allow you to **enable** or **disable** vehicle and leashed mobs teleportation when a player uses a Waystone. By default, the setting is set on **disabled**.
 ```
@@ -171,7 +171,7 @@ These commands respectively allow you to **enable** or **disable** vehicle and l
 ```
 </details>
 <details>
-<summary>Permission: Tp In Other Dimensions</summary>
+<summary>Tp In Other Dimensions</summary>
 
 If disabled, this permission force players to only see waystones being in the same dimension as themselves from a waystone's GUI. It can be useful if you don't want players to be able to teleport between different [Multiverse](https://dev.bukkit.org/projects/multiverse-core) worlds.
 This permission is enabled by default, meaning players can teleport in any dimensions.
