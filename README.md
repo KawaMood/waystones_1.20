@@ -9,6 +9,14 @@ A survival-friendly and multiplayer-friendly way to quickly travel in your world
 
 **[If you're playing on Minecraft 1.20.2 or more, see Waystones V.3](https://github.com/KawaMood/waystones_v2)**
 
+If you really need for some reasons, you can download Waystones V.2 from here:
+**V.2.1.6 (for 1.20.3)**: [Download](https://mc.kawamood.com/datapacks/PK_Waystones/PK_Waystones_V.2.1.6_MC_1.20.3+.zip)
+**V.2.1.6 (for 1.20.2**): [Download](https://mc.kawamood.com/datapacks/PK_Waystones/PK_Waystones_V.2.1.6_MC_1.20.2.zip)
+**V.2.1.4 (for 1.19.4 to 1.20.1)**: [Download](https://mc.kawamood.com/datapacks/PK_Waystones/PK_Waystones_V.2.1.4b.zip)
+
+Note that these versions don't contain all features most recent ones do, and aren't supported anymore.
+If you're about to use them on a modified version of Minecraft (with plugins or mods), the data pack could not work as intended.
+
 # 🪄Introduction
 ## What is Waystones?
 
